@@ -1,27 +1,64 @@
 --Plugin
+vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'              --Packet Manager
-    use 'folke/tokyonight.nvim'               --Colorscheme
-    use 'olimorris/onedarkpro.nvim'           --Colorscheme
-    use 'nvim-treesitter/nvim-treesitter'
-    use({"glepnir/lspsaga.nvim",
-        branch = "main",
+    use 'wbthomason/packer.nvim'                --Packet Manager
+    use 'folke/tokyonight.nvim'                 --Colorscheme
+    use 'olimorris/onedarkpro.nvim'             --Colorscheme
+    use 'nvim-treesitter/nvim-treesitter'       --Syntax Highlighting
+    use 'github/copilot.vim'                    -- Github Copilot
+    use 'neovim/nvim-lspconfig'                 -- LSP
+    use 'nvim-lua/completion-nvim'              -- Autocompletion
+    use 'sheerun/vim-polyglot'                  -- Syntax Highlighting
+    use 'nvim-lualine/lualine.nvim'             -- Statusline
+    use {
+        'folke/trouble.nvim',
         config = function()
-            local saga = require("lspsaga")
+            require('trouble').setup {}
+        end
+    }
 
-            saga.init_lsp_saga({
-                 -- your configuration
-            })
-        end,
-    })
     use {'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+      use {
+	  'VonHeikemen/lsp-zero.nvim',
+	  branch = 'v1.x',
+	  requires = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
+
+		  -- Autocompletion
+		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
+		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
+	  }
+  }
+
+    use 'folke/zen-mode.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'justinmk/vim-sneak'
+    use 'theprimeagen/harpoon'
     use 'mbbill/undotree'
-    use 'kyazdani42/nvim-web-devicons'
-    use {'kyazdani42/nvim-tree.lua',
-        requires = {'kyazdani42/nvim-web-devicons', -- optional, for file icon 
-          }}
+    use 'laytan/cloak.nvim'
+    use 'eandrju/cellular-automaton.nvim'
+
+    use {
+    'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', --optiona;
+        },
+        config = function()
+            require('nvim-tree').setup {}
+        end
+    }
 end)
