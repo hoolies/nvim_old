@@ -2,5 +2,5 @@
 require('settings')
 require('plugins')
 require('colors')
-require('mappings')
 require('lsp-config')
+require('mappings')
