@@ -5,11 +5,11 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'                 --Colorscheme
     use 'olimorris/onedarkpro.nvim'             --Colorscheme
     use 'nvim-treesitter/nvim-treesitter'       --Syntax Highlighting
-    use 'github/copilot.vim'                    -- Github Copilot
-    use 'neovim/nvim-lspconfig'                 -- LSP
-    use 'nvim-lua/completion-nvim'              -- Autocompletion
-    use 'sheerun/vim-polyglot'                  -- Syntax Highlighting
-    use 'nvim-lualine/lualine.nvim'             -- Statusline
+    use 'github/copilot.vim'                    --Github Copilot
+    use 'neovim/nvim-lspconfig'                 --LSP
+    use 'nvim-lua/completion-nvim'              --Autocompletion
+    use 'sheerun/vim-polyglot'                  --Syntax Highlighting
+    use 'nvim-lualine/lualine.nvim'             --Statusline
     use {
         'folke/trouble.nvim',
         config = function()
@@ -25,12 +25,12 @@ return require('packer').startup(function(use)
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
-		  -- LSP Support
+		  --LSP Support
 		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
 
-		  -- Autocompletion
+		  --Autocompletion
 		  {'hrsh7th/nvim-cmp'},
 		  {'hrsh7th/cmp-buffer'},
 		  {'hrsh7th/cmp-path'},
@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
 
-		  -- Snippets
+		  --Snippets
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
 	  }

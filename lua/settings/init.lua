@@ -5,7 +5,6 @@ local set = vim.opt		                                -- Set set as vim.opt, caus
 local augroup = vim.api.nvim_create_augroup	            -- Set augroup as vim.api.nvim_create_augroup
 local hoolies_group = augroup('hoolies', {})            -- Set hoolies_group
 local autocmd = vim.api.nvim_create_autocmd
-local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('yank', {})
 
 
