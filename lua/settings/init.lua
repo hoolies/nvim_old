@@ -1,4 +1,4 @@
---  Basic Configuaration
+ --  Basic Configuaration
 
 -- Local Variables
 local set = vim.opt		                                -- Set set as vim.opt, cause lazy
@@ -93,7 +93,7 @@ set.showtabline = 0
 -- Lualine
 require('lualine').setup {
   options = {
-    icons_enabled = true,
+    icons_enabled = false,
     theme = 'tokyonight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
