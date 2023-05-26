@@ -12,7 +12,7 @@ end
 
 -- Change leader to spacebar
 map('', '<SPACE>', '<nop>')
-vim.g.mapleader = ' ' 
+vim.g.mapleader = ' '
 
 -----------------------------------------------------------
 -- Neovim shortcuts
@@ -25,6 +25,9 @@ map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
 -- Map Esc to kk
+map('i', 'fj', '<Esc>')
+map('i', 'jf', '<Esc>')
+map('i', 'jk', '<Esc>')
 map('i', 'jj', '<Esc>')
 
 -- Clear search highlighting with <leader> and c
@@ -53,8 +56,12 @@ map('n', '<leader>s', ':w<CR>')
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
 
--- Close all windows save and exit 
+-- Close all windows save and exit
 map('n', '<leader>x', ':xa!<CR>')
+
+-- Command mode
+map('n', ';' , ':')
+
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
