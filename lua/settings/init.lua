@@ -40,7 +40,7 @@ set.incsearch = true                                    -- Set incremental
 
 -- Buffer
 set.hidden = true                                       -- Enable background buffers
---set.autoread = true                                   -- Automatically update file
+set.autoread = true                                     -- Automatically update file
 
 
 -- Number column

@@ -24,11 +24,27 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
--- Map Esc to kk
+-- Move around with Shift + {h,j,k,l}
+map('', 'K', '<nop>') -- empty the K entry from the plugins
+map('n', 'H', '^') -- move to the first non-blank character of the line
+map('n', 'J', '}') -- paragraph down
+map('n', 'K', '{') -- paragraph up
+map('n', 'L', '$') -- move to the end of the line
+
+-- Move around splits using Ctrl + {h,j,k,l}
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
+
+-- Map Esc
 map('i', 'fj', '<Esc>')
 map('i', 'jf', '<Esc>')
 map('i', 'jk', '<Esc>')
 map('i', 'jj', '<Esc>')
+
+-- Moving between buffers
+map('n', '<bs>', '<c-^>\'"zz', {silent = true, noremap = true}) -- go to previous buffer')
 
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
@@ -41,17 +57,14 @@ vim.opt.pastetoggle = '<F2>'
 map('n', '<leader>tk', '<C-w>t<C-w>K')  -- change vertical to horizontal
 map('n', '<leader>th', '<C-w>t<C-w>H')  -- change horizontal to vertical
 
--- Move around splits using Ctrl + {h,j,k,l}
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
-
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
 
 -- Fast saving with <leader> and s
 map('n', '<leader>s', ':w<CR>')
+
+-- Close current window or tab with <leader> and w
+map('n', '<leader>w', ':close<CR>')
 
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
@@ -61,6 +74,7 @@ map('n', '<leader>x', ':xa!<CR>')
 
 -- Command mode
 map('n', ';' , ':')
+
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
