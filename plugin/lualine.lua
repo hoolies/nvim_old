@@ -15,33 +15,26 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b ={'branch','diff', 'diagnostics'},
+    lualine_a = {
+      {
+        'mode',
+        icons_enabled = true,
+      },
+    },
+    lualine_b ={'branch','diff'},
     lualine_c = {
       {
-        'diagnostics',
-        sources = {'nvim_lsp'},
-        sections = {'error', 'warn', 'info', 'hint'},
-        symbols = {error = ' ', warn = ' ', info = '󰋽 ', hint = ' '},
-        diagnostics_color = {
-          -- Same values as the general color option can be used here.
-          error = 'DiagnosticError', -- Changes diagnostics' error color.
-          warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-          info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-          hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
-        },
-        colored = true,
-        update_in_insert = false,
-        severity_sort = false,
-      },
+        'datetime',
+        style = 'default',
+      }
     },
     lualine_x = {
       {
         'buffers',
         show_filename_only = true,
         show_modified_status = true,
-        mode = 2,
-        max_length = vim.o.columns * 2/3,
+        mode = 4j
+        max_length = vim.o.columns * 0.3,
       }
     },
     lualine_y = {'progress'},

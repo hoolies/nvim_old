@@ -23,7 +23,7 @@ set.autoread = true                                     -- Automatically update 
 -- Number column
 set.number = true	        	                        -- Set the number
 set.relativenumber = true	                            -- Set relative numbers
-set.numberwidth = 4                                     -- Width of the number on the left
+set.numberwidth = 5                                     -- Width of the number on the left
 vim.wo.colorcolumn = '0'
 
 
