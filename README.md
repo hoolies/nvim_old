@@ -10,6 +10,6 @@ Until the next time.
 
 I have 4 folders:
 * .git (to version the changes)
-* lua (where I have all the settings in separate lua files)
-* plugin (this is where I put the plugin settings in order to keep `set.lua` clean)
+* [lua](https://github.com/hoolies/nvim/tree/main/lua/hoolies) (where I have all the settings in separate lua files)
+* [plugin](https://github.com/hoolies/nvim/tree/main/plugin) (this is where I put the plugin settings in order to keep `set.lua` clean)
 * undodir (self explanatory)
