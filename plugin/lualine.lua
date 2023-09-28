@@ -33,7 +33,7 @@ require('lualine').setup {
         'buffers',
         show_filename_only = true,
         show_modified_status = true,
-        mode = 4j
+        mode = 4,
         max_length = vim.o.columns * 0.3,
       }
     },
